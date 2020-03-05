@@ -24,7 +24,10 @@
         "topthink/framework": "^6.0.0",
         "topthink/think-orm": "^2.0",
         "overtrue/wechat": "^4.2",
-        "firebase/php-jwt": "^5.1"
+        "firebase/php-jwt": "^5.1",
+        "jaeger/querylist": "^4.1",
+        "phpmailer/phpmailer": "^6.1",
+        "php-amqplib/php-amqplib": "^2.11"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2",
