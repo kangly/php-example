@@ -6,18 +6,26 @@ use app\Request;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
+/**
+ * Class Index
+ * @package app\controller
+ */
 class Index extends BaseController
 {
+    /**
+     * 世界惯例-HelloWorld
+     * @return string
+     */
     public function index()
     {
-        return 'success';
+        return 'Hello World';
     }
 
-    public function hello($name = 'ThinkPHP6')
-    {
-        return 'hello,' . $name;
-    }
-
+    /**
+     * 发送邮件
+     * @param Request $request
+     * @throws \Exception
+     */
     public function sendMail(Request $request)
     {
         $email = $request->param('email');
@@ -29,9 +37,9 @@ class Index extends BaseController
             $channel->basic_publish($msg, '', 'sendMail');
             $channel->close();
             $connection->close();
-            echo "Mail Sent success";
+            echo "Mail sent success";
         }else{
-            echo '非法请求！';
+            echo '非法请求!';
         }
     }
 }

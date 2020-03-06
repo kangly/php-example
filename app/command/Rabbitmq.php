@@ -12,7 +12,7 @@ use app\controller\Mail;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 /**
- * 在cmd命令行下面切换到应用根目录
+ * 在cmd命令行下,切换到应用根目录
  * 执行php think make:command Rabbitmq rabbitmq
  * Class Rabbitmq
  * @package app\command

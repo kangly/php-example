@@ -10,14 +10,16 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use think\facade\Config;
 
+/**
+ * Class Mail
+ * @package app\controller
+ */
 class Mail extends BaseController
 {
     public function welcome($email='')
     {
         $title = '这是一条测试数据！';
-        $content = '您好：<br>
-<p style="text-indent: 2em;">欢迎注册XX站点会员！这是一条测试数据！</p>
-<p style="float: right;margin-top: 50px;">本邮件为系统邮件，请勿回复！</p>';
+        $content = '您好：<br><p style="text-indent: 2em;">欢迎注册XX站点会员！这是一条测试数据！</p><p style="float: right;margin-top: 50px;">本邮件为系统邮件，请勿回复！</p>';
         $res = $this->sendMail($email,$title,$content);
         echo $res;
     }
@@ -36,7 +38,7 @@ class Mail extends BaseController
     {
         //简单记录邮件发送日志
         $log = new Logger('mailer');
-        $log->pushHandler(new StreamHandler('log/mail_'.date('Ymd').'.log', Logger::INFO));
+        $log->pushHandler(new StreamHandler('../log/mail_'.date('Ymd').'.log', Logger::INFO));
 
         $mail = new PHPMailer(true);
         $m = Config::get('mail');
