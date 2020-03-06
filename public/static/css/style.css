@@ -1,0 +1,9 @@
+.moveable_popup_win{width:350px;max-width:1000px;min-width: 200px;height:100px;display:none;background-color: #ffffff;border: 1px solid #ececec;border-radius: 5px;box-shadow: 3px 3px 3px 0 #999999;position: fixed!important;top:100px;left:300px;z-index: 1000;}
+.moveable_popup_win .title_bar{position:absolute;top:0;left:0;right:0;background-color:#fcfcfc;border-bottom:1px solid #ececec;height:24px;line-height:26px;padding:0 26px;cursor:move;overflow:hidden;border-top-right-radius:5px;border-top-left-radius:5px;}
+.moveable_popup_win.my_focus_pop .title_bar{background-color:#FFFFCC;}
+.moveable_popup_win .close_btn{font-size: 14px;right: 7px;position: absolute;top: 4px;cursor:pointer;}
+.moveable_popup_win .content_here{position:absolute;top:30px;left:3px;bottom:40px;right:3px;overflow:auto;}
+.moveable_popup_win .content_here.no_button{bottom:13px;}
+.moveable_popup_win .button_here{position:absolute;left:3px;right:3px;bottom:3px;height:30px;overflow:hidden;padding-left:20px;border-top:1px solid #ececec;}
+.moveable_popup_win .content_here .widget-box{margin-top:0!important;margin-bottom:0!important;}
+.my_focus_pop{z-index:1000!important;}

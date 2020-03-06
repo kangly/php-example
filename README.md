@@ -13,3 +13,5 @@ PHP开发中用到的各种测试例子，使用tp6框架。记得执行composer
     命令行切换到应用根目录下，执行php think rabbitmq
     浏览器访问：http://localhost/index/sendMail?email=xx@xx.com
     
+##### JsPopup 弹出层
+    浏览器访问：http://localhost/popup/index

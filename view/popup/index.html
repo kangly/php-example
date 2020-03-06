@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsPopup 弹出层</title>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/static/js/draggabilly.pkgd.min.js"></script>
+    <script type="text/javascript" src="/static/js/JsPopup.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/static/css/jquery-ui.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body style="margin:20px">
+<a href="javascript:void(0);" onclick="_test()">点击-弹出层</a>
+
+<div id="main-content"></div>
+
+<div id="myPopWindowModal" class="modal hide fade any_focus_pop">
+    <div id="myPopWindowModal_body" style="overflow-y:auto;width:100%;">
+        <div class="modal-body" id="select_teacher_modal_content" style="max-height:88%;top:5%;">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <span id="popWindowModalUserBtn"></span>&nbsp;
+        <a href="javascript:void(0);" class="btn okSelectTeacher primary">关闭</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function _test(){
+        _add_moveable_popup('view_test','测试-弹出层','','<div style="margin: 10px;">测试-弹出层<br>_add_moveable_popup函数<br>url参数可以设置为框架内的路径，例如：/index/welcome</div>',{width:600,height:300,top:100},{finishwork:function(){
+            _close_moveable_popup('view_test');
+        }});
+    }
+</script>
+</body>
+</html>
